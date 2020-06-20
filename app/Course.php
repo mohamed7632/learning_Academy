@@ -13,4 +13,10 @@ class Course extends Model
    public function Trainer(){
         return $this->belongsTo('App\Trainer');
     }
+   
+    public function students()
+    {
+        return $this->belongsToMany('App\Student');
+    }
+
 }
