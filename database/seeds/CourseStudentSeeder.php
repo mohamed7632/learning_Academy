@@ -13,8 +13,8 @@ class CourseStudentSeeder extends Seeder
     {
         for($i=0;$i<20;$i++){
        DB::table('course_student')->insert([
-           'course_id'=>rand(1,12),
-           'student_id'=>rand(1,50),
+           'course_id'=>rand(1,13),
+           'student_id'=>rand(1,25),
            'created_at'=>now(),
            'updated_at'=>now(),
        ]);

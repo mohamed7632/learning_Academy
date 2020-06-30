@@ -18,11 +18,14 @@ class AuthController extends Controller
             'password' =>'required|string',
             ]);
        
-      if(!Auth()->guard('admin')->attempt(['email'=>$data['email'],'password'=>$data['password']])){
-        return back();
+      if(!Auth()->guard('admin')->attempt(['email'=>$data['email'],'password'=>$data['password'] ])){
+      //  return back();
+  
+      return redirect('Dashboard/');
       }
       else{
-          return redirect('/Dashboard');
+        //dd($request);
+          return redirect('Dashboard/');
       }
        
              

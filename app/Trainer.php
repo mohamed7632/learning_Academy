@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Trainer extends Model
 {
     protected $gaurded=['id'];
+    protected $fillable = ['name','phone','spec','img'];
 }

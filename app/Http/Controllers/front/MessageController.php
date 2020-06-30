@@ -39,7 +39,7 @@ function contact(Request $request){
    
        
     message::create($data);
-       //return redirect('message/newsletter');
+       //return redirect('message/contact');
        return back();
    
 }

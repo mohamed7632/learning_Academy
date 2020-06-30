@@ -23,7 +23,7 @@ class HomePageController extends Controller
        $data['Student_count']=Student::count();
 
        $data['test']=Test::select('name','spec','desc','img')->get();
-        return view('front/index')->with($data);
+        return view('front.index')->with($data);
        
     }
 }

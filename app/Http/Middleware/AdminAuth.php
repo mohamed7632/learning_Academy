@@ -15,7 +15,7 @@ class AdminAuth
      */
     public function handle($request, Closure $next,$guard=null)
     {
-        if(Auth()->guard($guard)->check() ){
+        if(!Auth()->guard($guard)->check() ){
             return redirect('/Dashboard/login');
         }
         return $next($request);
