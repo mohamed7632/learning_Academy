@@ -22,6 +22,15 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{url('Dashboard/cats/')}}">Categries </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url('Dashboard/trainers/')}}">trainers </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url('Dashboard/courses/')}}">courses </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url('Dashboard/students/')}}">students </a>
+      </li>
      
     </ul>
     <ul class="navbar-nav ml-auto">

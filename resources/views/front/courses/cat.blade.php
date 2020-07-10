@@ -41,7 +41,7 @@
                         <div class="special_cource_text">
                             <a href="{{url('/category',$c->Category->id)}}" class="btn_4">{{$c->Category->name}}</a>
                             <h4>${{$c->price}}</h4>
-                            <a href="{{url('/category/'.$c->id.'/course/'.$c->Category->id)}}"><h3>{{$c->name}}</h3></a>
+                            <a href="{{url('/category/'.$c->Category->id.'/course/'.$c->id)}}"><h3>{{$c->name}}</h3></a>
                             <p>{{$c->small_desc}}</p>
                             <div class="author_info">
                                 <div class="author_img">

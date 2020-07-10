@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    protected $fillable=['name','email','spec'];
     public function courses()
     {
-        return $this->belongsToMany('App\Course')->withPivot('stats');
+       
+        return $this->belongsToMany('App\Course')->withPivot('status');
     }
 }

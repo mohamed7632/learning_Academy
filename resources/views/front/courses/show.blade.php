@@ -48,8 +48,8 @@
                             </li>
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
-                                    <p>Course Fee </p>
-                                    <span>${{$course->price}}}</span>
+                                    <p>Course price </p>
+                                    <span>${{$course->price}}</span>
                                 </a>
                             </li>
                            
@@ -58,9 +58,45 @@
                         
                     </div>
 
-                
-                </div> 
-             </div>
+
+    
+                    <h4 class="title">enroll now</h4>
+                    <div class="content">
+                        <div class="review-top row pt-40">
+                            <div class="col-lg-12">
+                                <h6 class="mb-15">Provide Your info</h6>
+                               
+                                @include('front.inc.errors')
+                                
+                                <form action="{{url('/message/enroll')}}" method="post">
+                                    @csrf
+
+                                    <input type="hidden" name="course_id" value="{{$course->id}}">
+
+                                    <div class="form-group">
+                                        <label for="my-input">Name:</label>
+                                        <input id="my-input" class="form-control" type="text" name="name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="my-input">Email:</label>
+                                        <input id="my-input" class="form-control" type="text" name="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="my-input">Speciality:</label>
+                                        <input id="my-input" class="form-control" type="text" name="spec">
+                                    </div>
+    
+                                    <input class="btn_1 d-block" type="submit" value="Enroll the course">
+                                </form>
+                                
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!--================ End Course Details Area =================-->
