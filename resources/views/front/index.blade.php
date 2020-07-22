@@ -2,6 +2,7 @@
 
 @extends('front.layout.master')
 @section('content')
+
     <!-- banner part start-->
     <section class="banner_part">
         <div class="container">
@@ -14,8 +15,7 @@
                             <h5>{{json_decode($banner->content)->title}}</h5>
                             <h1>{{json_decode($banner->content)->subtitle}}</h1>
                             <p>{{json_decode($banner->content)->desc}}</p>
-                            <a href="#" class="btn_1">View Course </a>
-                            <a href="#" class="btn_2">Get Started </a>
+                           
                         </div>
                     </div>
                 </div>

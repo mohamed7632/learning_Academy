@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::namespace('front')->group(function(){
     
-    Route::get('/','HomePageController@index' )->name('front.homepage');
+    Route::get('/home','HomePageController@index' )->name('front.homepage');
     Route::get('/category/{id}','CourseController@cat' )->name('front.cat');
     Route::get('/category/{id}/course/{cid}','CourseController@show' )->name('front.show');
     Route::get('/contact','ContactController@index' )->name('contact.show');

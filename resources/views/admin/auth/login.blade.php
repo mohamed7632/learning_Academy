@@ -9,7 +9,7 @@
     </head>
     <body>
 
-<div class="container m-5 p-5">
+<div class="container m-5 p-5 Width-50 ">
 @include ('admin.inc.errors')
     <form action="{{url('Dashboard/handel')}}"  method="post" >
     @csrf

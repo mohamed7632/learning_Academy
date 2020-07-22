@@ -11,9 +11,9 @@ use App\Test;
 use App\SiteContent;
 class HomePageController extends Controller
 {
-    function index(){
-        $data['banner']=SiteContent::select('content')->where('name','banner')->firstOrfail();
-        $data['course_content']=SiteContent::select('content')->where('name','courses')->firstOrfail();
+    public function index(){
+        $data['banner']=SiteContent::select('content')->where('name','banner')->first();
+        $data['course_content']=SiteContent::select('content')->where('name','courses')->first();
 
         $data['courses']=Course::select('id','name','small_desc','category_id','trainer_id','img','price')
         ->orderBy('id','desc')->take(3)->get();
@@ -23,6 +23,7 @@ class HomePageController extends Controller
        $data['Student_count']=Student::count();
 
        $data['test']=Test::select('name','spec','desc','img')->get();
+  
         return view('front.index')->with($data);
        
     }

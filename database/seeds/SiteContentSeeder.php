@@ -11,19 +11,27 @@ class SiteContentSeeder extends Seeder
      */
     public function run()
     {
-        // SiteContent::create([
-        //     'name'=>'banner',
-        //     'content'=>json_encode(['title'=>'EVERY STUDENT YEARNS TO LEARN',
-        //     'subtitle'=>'Making Your World Better',
-        //     'desc'=>"Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales his void unto last session for bite. Set have great you'll male grass yielding yielding man"
-        //     ])
-        // ]);
+         SiteContent::create([
+             'name'=>'banner',
+             'content'=>json_encode(['title'=>'EVERY STUDENT YEARNS TO LEARN',
+             'subtitle'=>'Making Your World Better',
+            'desc'=>"Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales his void unto last session for bite. Set have great you'll male grass yielding yielding man"
+             ])
+         ]);
 
-        SiteContent::create([
-            'name'=>'courses',
-            'content'=>json_encode(['title'=>'OUR POPULAR COURSES',
-            'subtitle'=>'Special Courses',
+         SiteContent::create([
+             'name'=>'testmonials',
+            'content'=>json_encode(['title'=>'TESIMONIALS',
+             'subtitle'=>'Happy Students',
             
+             ])
+         ]);
+         
+         SiteContent::create([
+            'name'=>'Newsletter',
+           'content'=>json_encode(['title'=>'TESIMONIALS',
+            'subtitle'=>'Stay updated with our latest trends Seed heaven so said place winged over given forth fruit',
+           
             ])
         ]);
     }
